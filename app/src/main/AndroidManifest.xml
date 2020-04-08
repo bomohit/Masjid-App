@@ -31,6 +31,7 @@
         </activity>
         <activity android:name=".MoneyFlowStatement" />
         <activity android:name=".DonateItem" />
+        <activity android:name=".DonateItemConfirmation" />
     </application>
 
 </manifest>

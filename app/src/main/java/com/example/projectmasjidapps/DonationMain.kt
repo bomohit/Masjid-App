@@ -23,6 +23,7 @@ class DonationMain : AppCompatActivity(), View.OnClickListener {
         // Display total out / money flow statement
         getTotalOut()
 
+        buttonItemDonation.setOnClickListener(this)
         buttonMoneyFlow.setOnClickListener(this)
 
 
@@ -57,6 +58,7 @@ class DonationMain : AppCompatActivity(), View.OnClickListener {
 
         when (i) {
             R.id.buttonMoneyFlow -> openStatement()
+            R.id.buttonItemDonation -> startActivity(Intent(this, DonateItem::class.java))
         }
     }
 
