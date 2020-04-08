@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MoneyFlowStatement" />
+        <activity android:name=".DonateItem" />
     </application>
 
 </manifest>
