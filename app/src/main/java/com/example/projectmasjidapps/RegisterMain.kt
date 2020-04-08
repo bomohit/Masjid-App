@@ -27,7 +27,7 @@ class RegisterMain : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         val i = v.id
         when (i) {
-            R.id.buttonConfirm -> createAccount(inputUsername.text.toString(), inputPassword.text.toString(), inputFullName.text.toString(), inputAddress.text.toString(), inputPhoneNo.text.toString())
+            R.id.buttonConfirm -> createAccount(inputUsername.text.toString(), inputLoginPassword.text.toString(), inputFullName.text.toString(), inputAddress.text.toString(), inputPhoneNo.text.toString())
         }
     }
 
@@ -93,12 +93,12 @@ class RegisterMain : AppCompatActivity(), View.OnClickListener {
         } else {
             inputUsername.error = null
         }
-        val password = inputPassword.text.toString()
+        val password = inputLoginPassword.text.toString()
         if (password.isEmpty()) {
-            inputPassword.error = "Perlu / Required"
+            inputLoginPassword.error = "Perlu / Required"
             valid = false
         } else {
-            inputPassword.error = null
+            inputLoginPassword.error = null
         }
         val fullName = inputFullName.text.toString()
         if (fullName.isEmpty()) {
