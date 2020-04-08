@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="waktu">
+        <item>SUBUH</item>
+        <item>ZOHOR</item>
+        <item>ASAR</item>
+        <item>MAGHRIB</item>
+        <item>ISYAK</item>
+    </string-array>
+</resources>
