@@ -21,13 +21,14 @@
         </activity>
         <activity android:name=".Tazkirah.RequestTazkirahConfirmation" />
         <activity android:name=".Tazkirah.TazkirahMain" >
+        </activity>
+        <activity android:name=".DonationMain" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DonationMain" />
     </application>
 
 </manifest>
