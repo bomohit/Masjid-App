@@ -18,14 +18,15 @@
         </activity>
         <activity android:name=".HomeMain" />
         <activity android:name=".RequestTazkirah" >
+        </activity>
+        <activity android:name=".RequestTazkirahConfirmation" />
+        <activity android:name=".TazkirahMain" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RequestTazkirahConfirmation" />
-        <activity android:name=".TazkirahMain" />
     </application>
 
 </manifest>
