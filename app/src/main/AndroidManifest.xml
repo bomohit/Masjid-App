@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeMain" />
+        <activity android:name=".RequestTazkirah" />
     </application>
 
 </manifest>
