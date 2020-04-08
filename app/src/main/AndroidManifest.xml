@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RequestTazkirahConfirmation" />
+        <activity android:name=".TazkirahMain" />
     </application>
 
 </manifest>
