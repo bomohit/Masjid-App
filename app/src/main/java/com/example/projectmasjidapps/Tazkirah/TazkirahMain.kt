@@ -1,9 +1,10 @@
-package com.example.projectmasjidapps
+package com.example.projectmasjidapps.Tazkirah
 
 import android.os.Bundle
 import android.util.Log.d
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.projectmasjidapps.R
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.getField
 import com.google.firebase.ktx.Firebase
@@ -52,11 +53,21 @@ class TazkirahMain : AppCompatActivity() {
                                     val kDate = doc.getField<String>("date").toString()
                                     val kWaktu = doc.getField<String>("waktu").toString()
 
-                                    kuliahList.add(kuliah(kTitle, kName, kDate, kWaktu))
+                                    kuliahList.add(
+                                        kuliah(
+                                            kTitle,
+                                            kName,
+                                            kDate,
+                                            kWaktu
+                                        )
+                                    )
 
                                     recyclerViewTazkirah.apply {
                                         layoutManager = LinearLayoutManager(this@TazkirahMain)
-                                        adapter = KuliahAdapter(kuliahList)
+                                        adapter =
+                                            KuliahAdapter(
+                                                kuliahList
+                                            )
                                     }
                                 }
                             }

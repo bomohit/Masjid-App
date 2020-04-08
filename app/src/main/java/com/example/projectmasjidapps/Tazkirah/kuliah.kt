@@ -1,4 +1,4 @@
-package com.example.projectmasjidapps
+package com.example.projectmasjidapps.Tazkirah
 
 data class kuliah (
     val title: String,
