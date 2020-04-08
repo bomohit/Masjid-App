@@ -1,15 +1,17 @@
 package com.example.projectmasjidapps
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.getField
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.donation_main.*
 
-class DonationMain : AppCompatActivity() {
+class DonationMain : AppCompatActivity(), View.OnClickListener {
 
-    val db = Firebase.firestore
+    private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +23,12 @@ class DonationMain : AppCompatActivity() {
         // Display total out / money flow statement
         getTotalOut()
 
+        buttonMoneyFlow.setOnClickListener(this)
+
 
     }
 
-    fun getTotalDonation() {
+    private fun getTotalDonation() {
 
         // Det data from db
         db.collection("Donation").document("Total Collected")
@@ -36,7 +40,7 @@ class DonationMain : AppCompatActivity() {
             }
     }
 
-    fun getTotalOut() {
+    private fun getTotalOut() {
 
         // Get data from db
         db.collection("Donation").document("Total Out")
@@ -46,5 +50,17 @@ class DonationMain : AppCompatActivity() {
 
                 viewTotalOut.text = total
             }
+    }
+
+    override fun onClick(v: View) {
+        val i = v.id
+
+        when (i) {
+            R.id.buttonMoneyFlow -> openStatement()
+        }
+    }
+
+    private fun openStatement() {
+        startActivity(Intent(this, MoneyFlowStatement::class.java))
     }
 }
