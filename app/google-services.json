@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "411633446028",
+    "firebase_url": "https://masjidapps-f1b5e.firebaseio.com",
+    "project_id": "masjidapps-f1b5e",
+    "storage_bucket": "masjidapps-f1b5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411633446028:android:5e388325414a95c26c9fa9",
+        "android_client_info": {
+          "package_name": "com.example.projectmasjidapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411633446028-ns7anhbqtnh4jmbqqh6g24utln2o2rjl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projectmasjidapps",
+            "certificate_hash": "7e7fc4a0c7d0e98d95f3e0083d69e1d07548e235"
+          }
+        },
+        {
+          "client_id": "411633446028-sbu3nvuqurop4ckkooueks5ibasv4lbo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJHZR3yx9a4TgMFY2HCNMNSATSy9P4bw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411633446028-sbu3nvuqurop4ckkooueks5ibasv4lbo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
