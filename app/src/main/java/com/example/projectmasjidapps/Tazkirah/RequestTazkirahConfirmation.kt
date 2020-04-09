@@ -35,14 +35,20 @@ class RequestTazkirahConfirmation : AppCompatActivity() {
 
         buttonConfirm.setOnClickListener {
 
-            db.collection("Tazkirah Request").document(date).collection("Waktu Solat").document(waktu)
-                .set(tazkirah)
+            val data = HashMap<String, Any>()
+            db.collection("Tazkirah Request").document(date)
+                .set(data)
                 .addOnSuccessListener {
-                    d("bomohit", "Tazkirah requested")
-                    Toast.makeText(applicationContext, "Tazkirah berjaya dimohon", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener { e ->
-                    d("bomohit", "error request Tazkirah : ", e)
+                    d("bomohit", "added")
+                    db.collection("Tazkirah Request").document(date).collection("Waktu Solat").document(waktu)
+                        .set(tazkirah)
+                        .addOnSuccessListener {
+                            d("bomohit", "Tazkirah requested")
+                            Toast.makeText(applicationContext, "Tazkirah berjaya dimohon", Toast.LENGTH_SHORT).show()
+                        }
+                        .addOnFailureListener { e ->
+                            d("bomohit", "error request Tazkirah : ", e)
+                        }
                 }
         }
 

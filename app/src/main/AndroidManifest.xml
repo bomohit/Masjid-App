@@ -17,11 +17,7 @@
         <activity android:name=".LoginMain" >
         </activity>
         <activity android:name=".HomeMain" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Tazkirah.RequestTazkirah" >
         </activity>
@@ -37,6 +33,13 @@
         <activity android:name=".Booking.BookingConfirmation" />
         <activity android:name=".Management.MayyitManagement" />
         <activity android:name=".Admin.AdminHome" />
+        <activity android:name=".Admin.AdminListTazkirah" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
