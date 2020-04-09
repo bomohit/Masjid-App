@@ -38,13 +38,14 @@ class AdminListTazkirah : AppCompatActivity() {
                         .get()
                         .addOnSuccessListener { res ->
                             for (doc in res) {
-                                val waktu = doc.id
+                                val id = doc.id
                                 val name = doc.getField<String>("name").toString()
                                 val title = doc.getField<String>("title").toString()
+                                val waktu = doc.getField<String>("waktu").toString()
 
-                                d("bomohit", "date: $date, waktu: $waktu, name: $name, title: $title")
+                                d("bomohit", "date: $date, waktu: $waktu, name: $name, title: $title, id: $id")
                                 // Add to tazkirah
-                                tazkirah.add(TazkirahList(date,waktu,title,name))
+                                tazkirah.add(TazkirahList(date,waktu,title,name,id))
 
                                 recyclerViewListTazkirah.apply {
                                     layoutManager = LinearLayoutManager(this@AdminListTazkirah)

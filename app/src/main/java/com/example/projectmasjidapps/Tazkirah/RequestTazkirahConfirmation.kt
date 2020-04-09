@@ -27,7 +27,7 @@ class RequestTazkirahConfirmation : AppCompatActivity() {
         viewTitle.text = title
 
         val tazkirah = hashMapOf(
-            "time" to waktu,
+            "waktu" to waktu,
             "date" to date,
             "title" to title,
             "name" to name
@@ -40,7 +40,7 @@ class RequestTazkirahConfirmation : AppCompatActivity() {
                 .set(data)
                 .addOnSuccessListener {
                     d("bomohit", "added")
-                    db.collection("Tazkirah Request").document(date).collection("Waktu Solat").document(waktu)
+                    db.collection("Tazkirah Request").document(date).collection("Waktu Solat").document()
                         .set(tazkirah)
                         .addOnSuccessListener {
                             d("bomohit", "Tazkirah requested")
