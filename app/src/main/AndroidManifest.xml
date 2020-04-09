@@ -35,6 +35,7 @@
         <activity android:name=".Donation.DonateItemConfirmation" />
         <activity android:name=".Booking.BookingMain" />
         <activity android:name=".Booking.BookingConfirmation" />
+        <activity android:name=".Management.MayyitManagement" />
     </application>
 
 </manifest>
