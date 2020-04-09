@@ -13,7 +13,8 @@
         </activity>
         <activity android:name=".RegisterMain" >
         </activity>
-        <activity android:name=".LoginMain" >
+        <activity android:name=".LoginMain"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,6 +43,10 @@
         <activity android:name=".Admin.Tazkirah.TazkirahConfirmation" />
         <activity android:name=".Admin.Booking.AdminBookingList" />
         <activity android:name=".Admin.Booking.AdminBookingDetail" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
