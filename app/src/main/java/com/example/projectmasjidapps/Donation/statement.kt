@@ -1,4 +1,4 @@
-package com.example.projectmasjidapps
+package com.example.projectmasjidapps.Donation
 
 data class statement (
     val name: String,

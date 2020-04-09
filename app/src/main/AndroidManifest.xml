@@ -28,11 +28,13 @@
         <activity android:name=".Tazkirah.RequestTazkirahConfirmation" />
         <activity android:name=".Tazkirah.TazkirahMain" >
         </activity>
-        <activity android:name=".DonationMain" >
+        <activity android:name=".Donation.DonationMain" >
         </activity>
-        <activity android:name=".MoneyFlowStatement" />
-        <activity android:name=".DonateItem" />
-        <activity android:name=".DonateItemConfirmation" />
+        <activity android:name=".Donation.MoneyFlowStatement" />
+        <activity android:name=".Donation.DonateItem" />
+        <activity android:name=".Donation.DonateItemConfirmation" />
+        <activity android:name=".Booking.BookingMain" />
+        <activity android:name=".Booking.BookingConfirmation" />
     </application>
 
 </manifest>

@@ -1,8 +1,9 @@
-package com.example.projectmasjidapps
+package com.example.projectmasjidapps.Donation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.projectmasjidapps.R
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.getField
 import com.google.firebase.ktx.Firebase
@@ -25,12 +26,20 @@ class MoneyFlowStatement : AppCompatActivity() {
                     val dName = document.id
                     val dTotal = document.getField<String>("total").toString()
 
-                    statementList.add(statement(dName, dTotal))
+                    statementList.add(
+                        statement(
+                            dName,
+                            dTotal
+                        )
+                    )
 
                     // initialize recycler view
                     recyclerViewMoneyFlowStatement.apply {
                         layoutManager = LinearLayoutManager(this@MoneyFlowStatement)
-                        adapter = MoneyFlowStatementAdapter(statementList)
+                        adapter =
+                            MoneyFlowStatementAdapter(
+                                statementList
+                            )
                     }
                 }
             }

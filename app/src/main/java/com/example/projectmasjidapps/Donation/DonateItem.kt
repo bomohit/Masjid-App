@@ -1,10 +1,11 @@
-package com.example.projectmasjidapps
+package com.example.projectmasjidapps.Donation
 
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projectmasjidapps.R
 import kotlinx.android.synthetic.main.donate_item.*
 class DonateItem : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {

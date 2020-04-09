@@ -1,9 +1,10 @@
-package com.example.projectmasjidapps
+package com.example.projectmasjidapps.Donation
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projectmasjidapps.R
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.getField
 import com.google.firebase.ktx.Firebase
