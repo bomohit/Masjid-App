@@ -48,19 +48,45 @@ class LoginMain : AppCompatActivity(), View.OnClickListener {
             return
         }
 
-        db.collection("User").document(username)
-            .get()
-            .addOnSuccessListener { result ->
-                if (password == result.getField<String>("password").toString()) {
-                    d("bomohit", "valid login")
-                    progressBarLogin.visibility = View.INVISIBLE
-                    Toast.makeText(applicationContext, "Welcome ${result.getField<String>("full name")}", Toast.LENGTH_SHORT).show()
-                } else {
-                    d("bomohit", "invalid login")
-                    progressBarLogin.visibility = View.INVISIBLE
-                    Toast.makeText(applicationContext, "Akaun tidak wujud", Toast.LENGTH_SHORT).show()
+        if(username != "admin") {
+            db.collection("User").document(username)
+                .get()
+                .addOnSuccessListener { result ->
+                    if (password == result.getField<String>("password").toString()) {
+                        d("bomohit", "valid login")
+                        progressBarLogin.visibility = View.INVISIBLE
+                        Toast.makeText(
+                            applicationContext,
+                            "Welcome ${result.getField<String>("full name")}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        d("bomohit", "invalid login")
+                        progressBarLogin.visibility = View.INVISIBLE
+                        Toast.makeText(applicationContext, "Akaun tidak wujud", Toast.LENGTH_SHORT)
+                            .show()
+                    }
                 }
-            }
+        } else {
+            db.collection("User").document(username)
+                .get()
+                .addOnSuccessListener { result ->
+                    if (password == result.getField<String>("password").toString()) {
+                        d("bomohit", "valid login")
+                        progressBarLogin.visibility = View.INVISIBLE
+                        Toast.makeText(
+                            applicationContext,
+                            "Welcome ${result.getField<String>("Admin")}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        d("bomohit", "invalid login")
+                        progressBarLogin.visibility = View.INVISIBLE
+                        Toast.makeText(applicationContext, "Akaun tidak wujud", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
+        }
     }
 
     fun validate(): Boolean {

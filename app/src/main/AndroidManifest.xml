@@ -36,6 +36,7 @@
         <activity android:name=".Booking.BookingMain" />
         <activity android:name=".Booking.BookingConfirmation" />
         <activity android:name=".Management.MayyitManagement" />
+        <activity android:name=".Admin.AdminHome" />
     </application>
 
 </manifest>
