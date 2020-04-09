@@ -6,6 +6,7 @@ import android.util.Log.d
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projectmasjidapps.Admin.AdminHome
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.getField
 import com.google.firebase.ktx.Firebase
@@ -60,6 +61,7 @@ class LoginMain : AppCompatActivity(), View.OnClickListener {
                             "Welcome ${result.getField<String>("full name")}",
                             Toast.LENGTH_SHORT
                         ).show()
+                        publicAcc()
                     } else {
                         d("bomohit", "invalid login")
                         progressBarLogin.visibility = View.INVISIBLE
@@ -76,9 +78,10 @@ class LoginMain : AppCompatActivity(), View.OnClickListener {
                         progressBarLogin.visibility = View.INVISIBLE
                         Toast.makeText(
                             applicationContext,
-                            "Welcome ${result.getField<String>("Admin")}",
+                            "Welcome Admin",
                             Toast.LENGTH_SHORT
                         ).show()
+                        adminAcc()
                     } else {
                         d("bomohit", "invalid login")
                         progressBarLogin.visibility = View.INVISIBLE
@@ -109,5 +112,13 @@ class LoginMain : AppCompatActivity(), View.OnClickListener {
         }
 
         return valid
+    }
+
+    fun adminAcc() {
+        startActivity(Intent(this, AdminHome::class.java))
+    }
+
+    fun publicAcc() {
+        startActivity(Intent(this, HomeMain::class.java))
     }
 }

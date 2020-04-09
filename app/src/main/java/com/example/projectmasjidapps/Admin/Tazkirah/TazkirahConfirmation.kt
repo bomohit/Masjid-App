@@ -6,7 +6,6 @@ import android.util.Log.d
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.projectmasjidapps.Admin.AdminListTazkirah
 import com.example.projectmasjidapps.R
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase

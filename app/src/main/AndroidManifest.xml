@@ -10,14 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
         </activity>
         <activity android:name=".RegisterMain" >
         </activity>
         <activity android:name=".LoginMain" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".HomeMain" >
-
         </activity>
         <activity android:name=".Tazkirah.RequestTazkirah" >
         </activity>
@@ -32,15 +35,13 @@
         <activity android:name=".Booking.BookingMain" />
         <activity android:name=".Booking.BookingConfirmation" />
         <activity android:name=".Management.MayyitManagement" />
-        <activity android:name=".Admin.AdminHome" />
-        <activity android:name=".Admin.AdminListTazkirah" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".Admin.AdminHome" >
+        </activity>
+        <activity android:name=".Admin.Tazkirah.AdminListTazkirah" >
         </activity>
         <activity android:name=".Admin.Tazkirah.TazkirahConfirmation" />
+        <activity android:name=".Admin.Booking.AdminBookingList" />
+        <activity android:name=".Admin.Booking.AdminBookingDetail" />
     </application>
 
 </manifest>

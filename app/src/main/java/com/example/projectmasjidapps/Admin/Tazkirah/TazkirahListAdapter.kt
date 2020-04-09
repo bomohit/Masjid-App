@@ -1,4 +1,4 @@
-package com.example.projectmasjidapps.Admin
+package com.example.projectmasjidapps.Admin.Tazkirah
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.projectmasjidapps.Admin.Tazkirah.TazkirahConfirmation
 import com.example.projectmasjidapps.R
 import kotlinx.android.synthetic.main.takirah_list.view.*
 
@@ -20,7 +19,10 @@ class TazkirahListAdapter(val tazkirah: MutableList<TazkirahList>) : RecyclerVie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.takirah_list, parent, false)
-        val holder = ViewHolder(view)
+        val holder =
+            ViewHolder(
+                view
+            )
 
         view.setOnClickListener {
             val intent = Intent(parent.context, TazkirahConfirmation::class.java)

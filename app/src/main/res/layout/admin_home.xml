@@ -15,22 +15,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonConfirmTazkirah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="confirm tazkirah"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonConfirmBooking"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonConfirmBooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirm Booking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/buttonConfirmTazkirah"
         app:layout_constraintTop_toBottomOf="@+id/textView40" />
 </androidx.constraintlayout.widget.ConstraintLayout>

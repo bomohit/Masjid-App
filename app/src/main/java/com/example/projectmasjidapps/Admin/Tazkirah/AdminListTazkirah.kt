@@ -1,11 +1,10 @@
-package com.example.projectmasjidapps.Admin
+package com.example.projectmasjidapps.Admin.Tazkirah
 
 import android.os.Bundle
 import android.util.Log.d
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projectmasjidapps.R
-import com.google.firebase.firestore.FieldPath
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.getField
 import com.google.firebase.ktx.Firebase
@@ -45,11 +44,22 @@ class AdminListTazkirah : AppCompatActivity() {
 
                                 d("bomohit", "date: $date, waktu: $waktu, name: $name, title: $title, id: $id")
                                 // Add to tazkirah
-                                tazkirah.add(TazkirahList(date,waktu,title,name,id))
+                                tazkirah.add(
+                                    TazkirahList(
+                                        date,
+                                        waktu,
+                                        title,
+                                        name,
+                                        id
+                                    )
+                                )
 
                                 recyclerViewListTazkirah.apply {
                                     layoutManager = LinearLayoutManager(this@AdminListTazkirah)
-                                    adapter = TazkirahListAdapter(tazkirah)
+                                    adapter =
+                                        TazkirahListAdapter(
+                                            tazkirah
+                                        )
                                 }
                             }
                         }
