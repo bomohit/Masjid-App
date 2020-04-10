@@ -23,18 +23,11 @@ class TazkirahMain : AppCompatActivity() {
 
         val kuliahList = mutableListOf<kuliah>()
 
-//        for ( i in 0..3) {
-//            kuliahList.add(
-//                kuliah(
-//                    "Bomoh it niggah",
-//                    "Faris Bin Mohamed Yusoff",
-//                    "22-01-2020",
-//                    "SUBUH"
-//                )
-//            )
-//        }
-
-
+        db.collection("Muqaddimah").document("opening")
+            .get()
+            .addOnSuccessListener { ress ->
+                textMuqaddimah.text = ress.getField<String>("Title")
+            }
 
         // Check the db for kuliah
         db.collection("Tazkirah")

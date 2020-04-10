@@ -28,6 +28,7 @@ class RegisterMain : AppCompatActivity(), View.OnClickListener {
         val i = v.id
         when (i) {
             R.id.buttonConfirm -> createAccount(inputUsername.text.toString(), inputLoginPassword.text.toString(), inputFullName.text.toString(), inputAddressDi.text.toString(), inputPhoneNo.text.toString())
+            R.id.buttonBack -> onBackPressed()
         }
     }
 

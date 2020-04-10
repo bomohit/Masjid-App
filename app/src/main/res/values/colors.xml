@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorBorder">#000000</color>
     <color name="colorBorderBack">#FFFFFF</color>
+    <color name="colorRecyclerBack">#2E3933</color>
+
 </resources>

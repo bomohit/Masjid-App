@@ -11,22 +11,25 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".RegisterMain" >
+        <activity android:name=".RegisterMain"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".LoginMain"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".HomeMain"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".Tazkirah.RequestTazkirah" >
+        </activity>
+        <activity android:name=".Tazkirah.RequestTazkirahConfirmation" />
+        <activity android:name=".Tazkirah.TazkirahMain"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".HomeMain" >
-        </activity>
-        <activity android:name=".Tazkirah.RequestTazkirah" >
-        </activity>
-        <activity android:name=".Tazkirah.RequestTazkirahConfirmation" />
-        <activity android:name=".Tazkirah.TazkirahMain" >
         </activity>
         <activity android:name=".Donation.DonationMain" >
         </activity>
