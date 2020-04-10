@@ -37,6 +37,7 @@ class RegisterMain : AppCompatActivity(), View.OnClickListener {
 
         // Check if the form completed or not
         if (!validate()) {
+            progressBarRegister.visibility = View.INVISIBLE
             return
         }
 
@@ -53,8 +54,9 @@ class RegisterMain : AppCompatActivity(), View.OnClickListener {
             .get()
             .addOnSuccessListener { result ->
                 val uid =result.getField<String>("username")
+                d("bomohit", "uid is : $uid")
 
-                if (uid == "null") {
+                if (uid.isNullOrEmpty()) {
                     d("bomohit", "username: valid")
                     db.collection("User").document(username)
                         .set(user)
@@ -62,7 +64,7 @@ class RegisterMain : AppCompatActivity(), View.OnClickListener {
                             d("bomohit", "account created")
                             progressBarRegister.visibility = View.INVISIBLE
                             Toast.makeText(applicationContext, "Akaun berjaya dibina/ Account Created", Toast.LENGTH_SHORT).show()
-//                            onBackPressed()
+                            onBackPressed()
                         }
                         .addOnFailureListener { e ->
                             progressBarRegister.visibility = View.INVISIBLE
@@ -123,7 +125,6 @@ class RegisterMain : AppCompatActivity(), View.OnClickListener {
             inputPhoneNo.error = null
         }
 
-        progressBarRegister.visibility = View.INVISIBLE
         return valid
     }
 }
