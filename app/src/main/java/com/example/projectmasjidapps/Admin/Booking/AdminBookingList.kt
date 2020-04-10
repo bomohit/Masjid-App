@@ -1,6 +1,8 @@
 package com.example.projectmasjidapps.Admin.Booking
 
 import android.os.Bundle
+import android.util.Log.d
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projectmasjidapps.R
@@ -13,13 +15,11 @@ class AdminBookingList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.admin_booking_list)
+        progressBarBookingList.visibility = View.VISIBLE
 
         val db = Firebase.firestore
         val booking = mutableListOf<BookingList>()
 
-//        for (i in 0..5) {
-//            booking.add(BookingList("Faris", "20-1-2020", "Bomoh iT", "5", "10", "2525"))
-//        }
 
         db.collection("Booking")
             .get()
@@ -39,6 +39,11 @@ class AdminBookingList : AppCompatActivity() {
                         adapter = BookingListAdapter(booking)
                     }
                 }
+                progressBarBookingList.visibility = View.INVISIBLE
+            }
+            .addOnFailureListener { e ->
+                d("bomohit", "fail : ",e)
+                progressBarBookingList.visibility = View.INVISIBLE
             }
 
 

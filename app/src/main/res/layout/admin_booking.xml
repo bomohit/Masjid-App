@@ -16,6 +16,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="Date:"
+        android:textColor="@color/colorBorder"
         app:layout_constraintEnd_toStartOf="@+id/viewDateB"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -29,12 +30,13 @@
         android:layout_marginStart="4dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        tools:text="20-01-2020"
+        android:textColor="@color/colorBorder"
         app:layout_constraintEnd_toStartOf="@+id/textView52"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/textView48"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20-01-2020" />
 
     <TextView
         android:id="@+id/textView52"
@@ -44,6 +46,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="Event:"
+        android:textColor="@color/colorBorder"
         app:layout_constraintEnd_toStartOf="@+id/viewEventB"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -58,11 +61,12 @@
         android:maxWidth="190dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        tools:text="Bomoh iT Galactic Federation"
         android:textAlignment="center"
+        android:textColor="@color/colorBorder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/textView52"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bomoh iT Galactic Federation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

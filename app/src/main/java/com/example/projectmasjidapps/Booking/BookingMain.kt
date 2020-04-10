@@ -17,7 +17,7 @@ class BookingMain : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.booking_main)
 
         buttonNext.setOnClickListener(this)
-        `@+id/buttonCancel`.setOnClickListener(this)
+        buttonCancel.setOnClickListener(this)
 
         // Calendar
         val c = Calendar.getInstance()

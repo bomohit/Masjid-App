@@ -140,7 +140,7 @@
         android:layout_height="52dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/button_green"
-        android:text="Sah / confirm"
+        android:text="Seterusnya / Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

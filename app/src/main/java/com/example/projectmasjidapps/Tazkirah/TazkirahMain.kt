@@ -3,6 +3,7 @@ package com.example.projectmasjidapps.Tazkirah
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log.d
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projectmasjidapps.R
@@ -17,6 +18,7 @@ class TazkirahMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tazkirah_main)
+        progressBarTazkirahMain.visibility = View.VISIBLE
 
         // Initialize firestore
         val db = Firebase.firestore
@@ -68,6 +70,7 @@ class TazkirahMain : AppCompatActivity() {
                                             )
                                     }
                                 }
+                                progressBarTazkirahMain.visibility = View.INVISIBLE
                             }
 
                     } else {

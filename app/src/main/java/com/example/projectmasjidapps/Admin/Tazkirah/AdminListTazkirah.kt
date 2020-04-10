@@ -22,9 +22,6 @@ class AdminListTazkirah : AppCompatActivity() {
 
         d("bomohit", "onCreate")
 
-//        for (i in 0..5) {
-//            tazkirah.add(TazkirahList("20-1-2020", "SUBUH", "Bomoh iT", "Faris"))
-//        }
 
         //grab data from db
         db.collection("Tazkirah Request")

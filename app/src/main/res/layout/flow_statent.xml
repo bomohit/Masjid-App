@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
 
     <TextView
         android:id="@+id/viewName"
@@ -14,6 +14,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="name :"
+        android:textColor="#020202"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +26,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="RM"
+        android:textColor="#020202"
         app:layout_constraintStart_toEndOf="@+id/viewName"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +39,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:text="total"
+        android:textColor="#020202"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView24"
         app:layout_constraintTop_toTopOf="parent" />

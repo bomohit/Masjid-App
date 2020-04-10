@@ -18,6 +18,7 @@ class DonateItemConfirmation : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.donate_item_confirmation)
+        progressBarDonateConfirm.visibility = View.INVISIBLE
 
         val name = intent.getStringExtra("name")
         val item = intent.getStringExtra("item")
@@ -49,6 +50,7 @@ class DonateItemConfirmation : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun updateToDb(name: String, item: String, address: String) {
+        progressBarDonateConfirm.visibility = View.VISIBLE
 
         val donation = hashMapOf(
             "name" to name,
@@ -62,10 +64,12 @@ class DonateItemConfirmation : AppCompatActivity(), View.OnClickListener {
             .addOnSuccessListener {
                 d("bomohit", "item successfully added")
                 Toast.makeText(applicationContext, "Terima Kasih", Toast.LENGTH_SHORT).show()
+                progressBarDonateConfirm.visibility = View.INVISIBLE
                 cancelPressed()
             }
             .addOnFailureListener { e ->
                 d("bomohit", "item fail to add : ", e)
+                progressBarDonateConfirm.visibility = View.INVISIBLE
             }
     }
 

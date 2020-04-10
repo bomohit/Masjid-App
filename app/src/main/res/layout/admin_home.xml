@@ -6,32 +6,76 @@
     android:layout_height="match_parent"
     android:background="@drawable/english_green">
 
-    <TextView
-        android:id="@+id/textView40"
+    <ImageView
+        android:id="@+id/imageView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView83"
+        app:srcCompat="@drawable/icon_home" />
+
+    <TextView
+        android:id="@+id/textView83"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/aclonica"
         android:text="MASJID JAMEK KEMUNTING"
+        android:textAlignment="center"
+        android:textColor="#FCFCFC"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonConfirmTazkirah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="confirm tazkirah"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/icon_tazkirah"
         app:layout_constraintEnd_toStartOf="@+id/buttonConfirmBooking"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        tools:text="confirm tazkirah" />
 
     <Button
         android:id="@+id/buttonConfirmBooking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirm Booking"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/icon_booking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/buttonConfirmTazkirah"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        tools:text="Confirm Booking" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tazkirah"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/buttonConfirmTazkirah"
+        app:layout_constraintStart_toStartOf="@+id/buttonConfirmTazkirah"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConfirmTazkirah" />
+
+    <TextView
+        android:id="@+id/textView84"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Tempah / Booking"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/buttonConfirmBooking"
+        app:layout_constraintStart_toStartOf="@+id/buttonConfirmBooking"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConfirmBooking" />
 </androidx.constraintlayout.widget.ConstraintLayout>
