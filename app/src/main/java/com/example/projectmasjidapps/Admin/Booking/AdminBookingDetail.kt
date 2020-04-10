@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log.d
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projectmasjidapps.R
 import com.google.firebase.firestore.ktx.firestore
@@ -86,6 +87,7 @@ class AdminBookingDetail : AppCompatActivity(), View.OnClickListener {
             .addOnSuccessListener {
                 d("bomohit", "added to db")
                 rejectBooking(id)
+                Toast.makeText(applicationContext, "Permohonan Disahkan", Toast.LENGTH_SHORT).show()
             }
     }
 

@@ -14,6 +14,7 @@
         <activity android:name=".RegisterMain"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".LoginMain"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,41 +23,60 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".HomeMain"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".Tazkirah.RequestTazkirah"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".Tazkirah.RequestTazkirahConfirmation" />
+
+        <activity android:name=".Tazkirah.RequestTazkirahConfirmation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".Tazkirah.TazkirahMain"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".Donation.DonationMain"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".Donation.MoneyFlowStatement"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Donation.DonateItem" />
-        <activity android:name=".Donation.DonateItemConfirmation" />
+
+        <activity android:name=".Donation.DonateItem"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Donation.DonateItemConfirmation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".Booking.BookingMain"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".Booking.BookingConfirmation"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".Management.MayyitManagement"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".Admin.AdminHome"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".Admin.Tazkirah.AdminListTazkirah"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+
         <activity android:name=".Admin.Tazkirah.TazkirahConfirmation"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".Admin.Booking.AdminBookingList"
             android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".Admin.Booking.AdminBookingDetail"
             android:theme="@style/AppTheme.NoActionBar"/>
 
