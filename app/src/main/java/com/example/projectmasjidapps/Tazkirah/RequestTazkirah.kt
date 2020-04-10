@@ -28,7 +28,7 @@ class RequestTazkirah : AppCompatActivity(), AdapterView.OnItemSelectedListener,
         // Time Spinner
         spinnerTazkirahTime.onItemSelectedListener = this
         buttonConfirm.setOnClickListener(this)
-        buttonBack.setOnClickListener(this)
+        buttonCancel.setOnClickListener(this)
 
         ArrayAdapter.createFromResource(
             this,
@@ -68,6 +68,8 @@ class RequestTazkirah : AppCompatActivity(), AdapterView.OnItemSelectedListener,
 
         when (i) {
             R.id.buttonConfirm -> requestTazkirah(inputTazkirahTitle.text.toString(), inputTazkirahName.text.toString(), inputTazkirahDate.text.toString(), waktu)
+
+            R.id.buttonCancel -> onBackPressed()
         }
     }
 

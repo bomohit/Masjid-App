@@ -1,5 +1,6 @@
 package com.example.projectmasjidapps.Tazkirah
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log.d
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,10 @@ class TazkirahMain : AppCompatActivity() {
         // Initialize firestore
         val db = Firebase.firestore
         val current = LocalDate.now()
+
+        buttonRequest.setOnClickListener {
+            startActivity(Intent(this, RequestTazkirah::class.java))
+        }
 
         val kuliahList = mutableListOf<kuliah>()
 

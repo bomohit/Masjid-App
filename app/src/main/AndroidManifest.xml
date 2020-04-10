@@ -20,7 +20,8 @@
         <activity android:name=".HomeMain"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".Tazkirah.RequestTazkirah" >
+        <activity android:name=".Tazkirah.RequestTazkirah"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".Tazkirah.RequestTazkirahConfirmation" />
         <activity android:name=".Tazkirah.TazkirahMain"

@@ -9,8 +9,6 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.projectmasjidapps.R
 import kotlinx.android.synthetic.main.booking_main.*
-import kotlinx.android.synthetic.main.booking_main.buttonBack
-import kotlinx.android.synthetic.main.request_tazkirah.*
 import java.util.*
 
 class BookingMain : AppCompatActivity(), View.OnClickListener {
@@ -19,7 +17,7 @@ class BookingMain : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.booking_main)
 
         buttonNext.setOnClickListener(this)
-        buttonBack.setOnClickListener(this)
+        `@+id/buttonCancel`.setOnClickListener(this)
 
         // Calendar
         val c = Calendar.getInstance()
@@ -45,7 +43,7 @@ class BookingMain : AppCompatActivity(), View.OnClickListener {
 
         when (i) {
             R.id.buttonNext -> passToConfirmation(inputNameB.text.toString(), inputDateB.text.toString(), inputEventB.text.toString(), inputTentB.text.toString(), inputChairB.text.toString())
-            R.id.buttonBack -> onBackPressed()
+            R.id.buttonCancel -> onBackPressed()
         }
     }
 

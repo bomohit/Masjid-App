@@ -13,7 +13,7 @@ class DonateItem : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.donate_item)
 
         buttonNext.setOnClickListener(this)
-        buttonBack.setOnClickListener(this)
+        buttonCancel.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -21,7 +21,7 @@ class DonateItem : AppCompatActivity(), View.OnClickListener {
 
         when (i) {
             R.id.buttonNext -> passForConfirmation(inputNameDi.text.toString(), inputItemDi.text.toString(), inputAddressDi.text.toString())
-            R.id.buttonBack -> onBackPressed()
+            R.id.buttonCancel -> onBackPressed()
         }
     }
 
